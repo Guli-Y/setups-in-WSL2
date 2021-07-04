@@ -1,0 +1,35 @@
+To install docker:
+**[follow this](https://docs.docker.com/docker-for-windows/wsl/)**
+
+To login:
+> docker login
+
+To start the docker:
+> sudo service docker start
+
+To test whether it is working correctly:
+> sudo docker run hello-world
+
+To pull a docker image:
+> docker pull \<docker_image_name>
+
+To list docker images:
+> docker images
+
+To run a container:
+> docker run --name \<container_name> -p 127.0.0.1:9042:9042 -d \<docker_image_name>      
+
+To list containers:
+> docker ps -a
+
+To stop a running container:
+> docker stop \<container_name>
+
+To  re-create a container, first delete the first container:
+> docker rm \<container_name>
+
+To get a list of existing containers
+> docker container ls
+
+To stop the docker:
+> sudo service docker stop

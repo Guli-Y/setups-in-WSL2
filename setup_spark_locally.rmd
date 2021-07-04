@@ -1,0 +1,38 @@
+[Why use docker to get Apache Spark for WSL2 ?](https://towardsdatascience.com/apache-spark-on-windows-a-docker-approach-4dd05d8a7147)
+
+
+[Jupyter Docker Stack](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html#using-the-docker-cli)
+
+Login to docker:
+> docker login
+
+Start the docker:
+> sudo service docker start
+
+Test whether it is working correctly:
+> sudo docker run hello-world
+
+Pull a docker image called jupyter/pyspark-notebook:
+> docker pull jupyter/pyspark-notebook
+
+List docker images:
+> docker images
+
+Run a container called spark:
+> docker run --name spark jupyter/pyspark-notebook
+
+List containers:
+> docker ps -a
+
+Stop a running container using the container id or name:
+> docker stop \<container id/name>
+
+Start a stopped container:
+> docker start -a \<container id/name>
+
+Remove a container:
+
+> docker rm \<container id/name>
+
+Stop the docker service:
+> sudo service docker stop
